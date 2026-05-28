@@ -10,7 +10,6 @@ RUN npm run build
 
 FROM node:20-bookworm-slim AS runtime
 
-ENV NODE_ENV=production
 ENV CHAT2API_HEADLESS=1
 ENV ELECTRON_DISABLE_SECURITY_WARNINGS=true
 ENV DISPLAY=:99
@@ -40,7 +39,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --include=dev
+
+ENV NODE_ENV=production
 
 COPY --from=builder /app/out ./out
 COPY --from=builder /app/build ./build
