@@ -15,129 +15,129 @@
 </p>
 
 <p align="center">
-  <strong><a href="README_CN.md">中文</a> | <a href="https://chat2api-doc.vercel.app/">Official Website</a> | <a href="https://chat2api-doc.vercel.app/docs">Documentation</a></strong>
+  <strong><a href="README.md">English</a> | <a href="https://chat2api-doc.vercel.app/">官网介绍</a> | <a href="https://chat2api-doc.vercel.app/docs">文档</a></strong>
 </p>
 
 <p align="center">
-  <strong>Multi-platform AI Service Unified Management Tool</strong>
+  <strong>多平台 AI 服务统一管理工具</strong>
 </p>
 
 <p align="center">
-  Chat2API enables zero-cost access to leading AI models by leveraging official web UIs. It supports providers such as DeepSeek, GLM, Kimi, MiniMax, Qwen, and Z.ai, and seamlessly integrates with tools like openlcaw, Cline, and Roo-Code — making any OpenAI-compatible client work out of the box.
+  Chat2API 通过驱动各大模型的官方 Web UI，实现 0 成本接入主流 AI 大模型。支持 DeepSeek、GLM、Kimi、MiniMax、Qwen、Z.ai 等渠道，可无缝连接 openlcaw、Cline、Roo-Code 等工具，让任何 OpenAI 兼容客户端即刻可用。
 </p>
 
 ![Product Preview](docs/screenshots/preview.png)
 
-## ✨ Features
+## ✨ 功能特性
 
-- OpenAI Compatible API: Provides standard OpenAI-compatible API endpoints for seamless integration
-- Multi-Provider Support: Connect DeepSeek, GLM, Kimi, MiniMax, Perplexity 🆕, Qwen, Z.ai and more
-- 🆕 Context Management: Intelligent conversation context management with sliding window, token limit, and summary strategies
-- 🆕 Function Calling Support: Universal tool calling capability for all models via prompt engineering, compatible with Cherry Studio, Kilo Code, and other clients
-- 🆕 Model Mapping: Flexible model name mapping with wildcard support and preferred provider/account selection
-- 🆕 Custom Parameters: Support for custom HTTP headers to enable web search, thinking mode, and deep research features
-- Dashboard Monitoring: Real-time request traffic, token usage, and success rates
-- API Key Management: Generate and manage keys for your local proxy
-- Model Management: View and manage available models from all providers
-- Request Logs: Detailed request logging for debugging and analysis
-- Proxy Configuration: Flexible proxy settings and routing strategies
-- System Tray Integration: Quick access to status from menu bar
-- Multilingual: English and Simplified Chinese support
-- Modern UI: Clean, responsive interface with dark/light theme support
+- OpenAI 兼容 API：提供标准 OpenAI 兼容接口，无缝对接现有工具
+- 多服务商支持：支持 DeepSeek、GLM、Kimi、MiniMax、Perplexity 🆕、Qwen、Z.ai 等
+- 🆕 上下文管理：智能对话上下文管理，支持滑动窗口、Token 限制和总结压缩策略
+- 🆕 工具调用支持：通过提示词工程为所有模型提供通用工具调用能力，兼容 Cherry Studio、Kilo Code 等客户端
+- 🆕 模型映射：灵活的模型名称映射，支持通配符和首选服务商/账户选择
+- 🆕 自定义参数：支持自定义 HTTP Header 开启联网搜索、深度思考、深度研究等功能
+- 仪表盘监控：实时请求流量、Token 使用量和成功率统计
+- API Key 管理：为本地代理生成和管理密钥
+- 模型管理：查看和管理所有服务商的可用模型
+- 请求日志：详细的请求日志记录，便于调试和分析
+- 代理配置：灵活的代理设置和路由策略
+- 系统托盘集成：从菜单栏快速访问状态
+- 多语言支持：支持英文和简体中文
+- 现代界面：简洁响应式界面，支持深色/浅色主题
 
-## 🤖 Supported Providers
+## 🤖 支持的服务商
 
-| Provider         | Auth Type     | OAuth | Models                                                                                                                                                                                                                                          |
-| ---------------- | ------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DeepSeek         | User Token    | Yes   | deepseek-v4-flash, deepseek-v4-pro                                                                                                                                                                                                              |
-| GLM              | Refresh Token | Yes   | GLM-5.1                                                                                                                                                                                                                                         |
-| Kimi             | JWT Token     | Yes   | Kimi-K2.6                                                                                                                                                                                                                                       |
-| MiniMax          | JWT Token     | Yes   | MiniMax-M2.7                                                                                                                                                                                                                                    |
-| Mimo             | Cookie        | Yes   | MiMo-V2.5-Pro, MiMo-V2.5, MiMo-V2-Flash                                                                                                                                                                                                         |
-| Perplexity       | Cookie        | Yes   | Auto                                                                                                                                                                                                                                           |
-| Qwen (CN)        | SSO Ticket    | Yes   | Qwen3.6, Qwen3.7-Max, Qwen3.5-Flash, Qwen3-Max, Qwen3-Max-Thinking-Preview, Qwen3-Coder                                                                                                                                                         |
-| Qwen AI (Global) | JWT Token     | Yes   | Qwen3.7-Max, Qwen3.6-Plus, Qwen3.6-35B-A3B, Qwen3.6-27B, Qwen3-Coder                                                                                                                                                                           |
-| Z.ai             | JWT Token     | Yes   | Temporarily unavailable due to frontend captcha risk control                                                                                                                                                                                    |
+| 服务商           | 认证类型          | OAuth | 模型                                                                                                                                                                                                                                            |
+| ------------- | ------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DeepSeek      | User Token    | 是     | deepseek-v4-flash, deepseek-v4-pro                                                                                                                                                                                                            |
+| GLM           | Refresh Token | 是     | GLM-5.1                                                                                                                                                                                                                                       |
+| Kimi          | JWT Token     | 是     | Kimi-K2.6                                                                                                                                                                                                                                     |
+| MiniMax       | JWT Token     | 是     | MiniMax-M2.7                                                                                                                                                                                                                                  |
+| Mimo          | Cookie        | 是     | MiMo-V2.5-Pro, MiMo-V2.5, MiMo-V2-Flash                                                                                                                                                                                                       |
+| Perplexity    | Cookie        | 是     | Auto                                                                                                                                                                                                                                         |
+| Qwen (国内版)    | SSO Ticket    | 是     | Qwen3.6, Qwen3.7-Max, Qwen3.5-Flash, Qwen3-Max, Qwen3-Max-Thinking-Preview, Qwen3-Coder                                                                                                                                                       |
+| Qwen AI (国际版) | JWT Token     | 是     | Qwen3.7-Max, Qwen3.6-Plus, Qwen3.6-35B-A3B, Qwen3.6-27B, Qwen3-Coder                                                                                                                                                                         |
+| Z.ai          | JWT Token     | 是     | 受前端验证码风控限制，暂不可用                                                                                                                                                                                                                              |
 
-Provider adaptation notes and manual model-addition guides are in [docs/providers](docs/providers/README.md).
+供应商适配说明和手动添加模型教程见 [docs/providers](docs/providers/README.md)。
 
-## 📥 Installation
+## 📥 安装
 
-### Download
+### 下载安装
 
-Download the latest release from [GitHub Releases](https://github.com/xiaoY233/Chat2API/releases):
+从 [GitHub Releases](https://github.com/xiaoY233/Chat2API/releases) 下载最新版本：
 
-| Platform              | Download                                |
-| --------------------- | --------------------------------------- |
-| macOS (Apple Silicon) | `Chat2API-x.x.x-arm64.dmg`              |
-| macOS (Intel)         | `Chat2API-x.x.x-x64.dmg`                |
-| Windows               | `Chat2API-x.x.x-x64-setup.exe`          |
-| Linux                 | `Chat2API-x.x.x-x64.AppImage` or `.deb` |
+| 平台                    | 下载文件                                   |
+| --------------------- | -------------------------------------- |
+| macOS (Apple Silicon) | `Chat2API-x.x.x-arm64.dmg`             |
+| macOS (Intel)         | `Chat2API-x.x.x-x64.dmg`               |
+| Windows               | `Chat2API-x.x.x-x64-setup.exe`         |
+| Linux                 | `Chat2API-x.x.x-x64.AppImage` 或 `.deb` |
 
-### Build from Source
+### 从源码构建
 
-**Requirements:**
+**环境要求：**
 
 - Node.js 18+
 - npm
 - Git
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/xiaoY233/Chat2API.git
 cd Chat2API
 
-# Install dependencies
+# 安装依赖
 npm install
 
-# Start development server
+# 启动开发服务器
 npx electron-vite dev 2>&1
 ```
 
-### Build for Production
+### 构建生产版本
 
 ```bash
-npm run build              # Build the application
-npm run build:mac          # Build for macOS (dmg, zip)
-npm run build:win          # Build for Windows (nsis)
-npm run build:linux        # Build for Linux (AppImage, deb)
-npm run build:all          # Build for all platforms
+npm run build              # 构建应用
+npm run build:mac          # 构建 macOS 版本 (dmg, zip)
+npm run build:win          # 构建 Windows 版本 (nsis)
+npm run build:linux        # 构建 Linux 版本 (AppImage, deb)
+npm run build:all          # 构建所有平台
 ```
 
-## 📖 Usage
+## 📖 使用方法
 
-### Step 1: Launch the App
+### 步骤 1：启动应用
 
-After installation, launch Chat2API. You'll see the main dashboard.
+安装完成后，启动 Chat2API。您将看到主仪表盘。
 
-### Step 2: Add a Provider
+### 步骤 2：添加供应商
 
-1. Navigate to **Providers** from the sidebar
-2. Click **Add Provider** button
-3. Select a built-in provider (e.g., DeepSeek)
-4. Enter your authentication credentials
+1. 从侧边栏导航到**供应商**页面
+2. 点击**添加供应商**按钮
+3. 选择一个内置供应商（例如 DeepSeek）
+4. 输入您的认证凭证
 
-For example, to get a DeepSeek token:
+例如，获取 DeepSeek Token：
 
-1. Visit [DeepSeek Chat](https://chat.deepseek.com/)
-2. Start any conversation
-3. Press `F12` to open Developer Tools
-4. Go to **Application** > **Local Storage**
-5. Find `userToken` and copy its value
+1. 访问 [DeepSeek Chat](https://chat.deepseek.com/)
+2. 开始任意对话
+3. 按 `F12` 打开开发者工具
+4. 转到 **Application** > **Local Storage**
+5. 找到 `userToken` 并复制其值
 
-### Step 3: Configure Proxy
+### 步骤 3：配置代理
 
-1. Navigate to **Proxy Settings** from the sidebar
-2. Set the port (default: 8080)
-3. Choose a load balancing strategy:
-   - **Round Robin**: Distributes requests evenly across accounts
-   - **Fill First**: Uses one account until limit is reached
-   - **Failover**: Automatically switches on failure
-4. Click **Start Proxy**
+1. 从侧边栏导航到**代理设置**页面
+2. 设置端口（默认：8080）
+3. 选择负载均衡策略：
+   - **轮询**：在账户间均匀分配请求
+   - **填充优先**：使用一个账户直到达到限制
+   - **故障转移**：失败时自动切换
+4. 点击**启动代理**
 
-### Step 4: Test the API
+### 步骤 4：测试 API
 
-Using Python (OpenAI SDK):
+使用 Python (OpenAI SDK)：
 
 ```python
 from openai import OpenAI
@@ -150,123 +150,123 @@ client = OpenAI(
 response = client.chat.completions.create(
     model="deepseek-v4-flash",
     messages=[
-        {"role": "user", "content": "Hello, who are you?"}
+        {"role": "user", "content": "你好，你是谁？"}
     ]
 )
 
 print(response.choices[0].message.content)
 ```
 
-### Step 5: Manage API Keys (Optional)
+### 步骤 5：管理 API Key（可选）
 
-For security, you can enable API Key authentication:
+为了安全，您可以启用 API Key 认证：
 
-1. Go to **API Keys** page
-2. Click **New API Key**
-3. Enter a name and description
-4. Copy the generated key
+1. 转到 **API Keys** 页面
+2. 点击**新建 API Key**
+3. 输入名称和描述
+4. 复制生成的密钥
 
-## 📸 Screenshots
+## 📸 截图
 
-| Dashboard | Providers |
-|-----------|-----------|
+| 仪表盘 | 服务商 |
+|--------|--------|
 | ![Dashboard](docs/screenshots/dashboard.png) | ![Providers](docs/screenshots/providers.png) |
 
-| Proxy Settings | API Keys |
-|----------------|----------|
+| 代理设置 | API Key |
+|----------|---------|
 | ![Proxy](docs/screenshots/proxy.png) | ![API Keys](docs/screenshots/api-keys.png) |
 
-| Models | Session |
-|--------|---------|
+| 模型管理 | 会话管理 |
+|----------|----------|
 | ![Models](docs/screenshots/models.png) | ![Session](docs/screenshots/Session.png) |
 
-## ⚙️ Settings
+## ⚙️ 设置选项
 
-- **Port**: Change the proxy listening port (default: 8080)
-- **Routing Strategy**: Round Robin or Fill First
-- **Auto-start**: Launch proxy automatically on app startup
-- **Theme**: Light, Dark, or System preference
-- **Language**: English or Simplified Chinese
+- **端口**：更改代理监听端口（默认：8080）
+- **路由策略**：轮询（Round Robin）或填充优先（Fill First）
+- **自动启动**：应用启动时自动启动代理
+- **主题**：浅色、深色或跟随系统
+- **语言**：英文或简体中文
 
-## 🏗️ Architecture
+## 🏗️ 项目结构
 
 ```
 Chat2API/
 ├── src/
-│   ├── main/                    # Electron main process
-│   │   ├── index.ts            # App entry point
-│   │   ├── tray.ts             # System tray integration
-│   │   ├── proxy/              # Proxy server management
-│   │   ├── ipc/                # IPC handlers
-│   │   └── utils/              # Utilities
-│   ├── preload/                # Context bridge
-│   └── renderer/               # React frontend
-│       ├── components/         # UI components
-│       ├── pages/              # Page components
-│       ├── stores/             # Zustand state
-│       └── hooks/              # Custom hooks
-├── build/                      # Build resources
-└── scripts/                    # Build scripts
+│   ├── main/                    # Electron 主进程
+│   │   ├── index.ts            # 应用入口
+│   │   ├── tray.ts             # 系统托盘集成
+│   │   ├── proxy/              # 代理服务器管理
+│   │   ├── ipc/                # IPC 处理器
+│   │   └── utils/              # 工具函数
+│   ├── preload/                # 上下文桥接
+│   └── renderer/               # React 前端
+│       ├── components/         # UI 组件
+│       ├── pages/              # 页面组件
+│       ├── stores/             # Zustand 状态
+│       └── hooks/              # 自定义 Hooks
+├── build/                      # 构建资源
+└── scripts/                    # 构建脚本
 ```
 
-## 🔧 Tech Stack
+## 🔧 技术栈
 
-| Component | Technology            |
-| --------- | --------------------- |
-| Framework | Electron 33+          |
-| Frontend  | React 18 + TypeScript |
-| Styling   | Tailwind CSS          |
-| State     | Zustand               |
-| Build     | Vite + electron-vite  |
-| Packaging | electron-builder      |
-| Server    | Koa                   |
+| 组件   | 技术                    |
+| ---- | --------------------- |
+| 框架   | Electron 33+          |
+| 前端   | React 18 + TypeScript |
+| 样式   | Tailwind CSS          |
+| 状态管理 | Zustand               |
+| 构建工具 | Vite + electron-vite  |
+| 打包工具 | electron-builder      |
+| 服务器  | Koa                   |
 
-## 📁 Data Storage
+## 📁 数据存储
 
-Application data is stored in `~/.chat2api/` directory:
+应用数据存储在 `~/.chat2api/` 目录下：
 
-- `config.json` - Application configuration
-- `providers.json` - Provider settings
-- `accounts.json` - Account credentials (encrypted)
-- `logs/` - Request logs
+- `config.json` - 应用配置
+- `providers.json` - 服务商设置
+- `accounts.json` - 账户凭证（加密）
+- `logs/` - 请求日志
 
-## ❓ FAQ
+## ❓ 常见问题
 
-### macOS: "App is damaged and can't be opened"
+### macOS 提示"应用已损坏，无法打开"？
 
-Due to macOS security mechanisms, apps downloaded outside the App Store may trigger this warning. Run the following command to fix it:
+由于 macOS 的安全机制，非 App Store 下载的应用可能会触发此提示。运行以下命令即可修复：
 
 ```bash
 sudo xattr -rd com.apple.quarantine "/Applications/Chat2API.app"
 ```
 
-### How to update?
+### 如何更新？
 
-Check for updates in the **About** page, or download the latest version from [GitHub Releases](https://github.com/xiaoY233/Chat2API/releases).
+在 **关于** 页面检查更新，或从 [GitHub Releases](https://github.com/xiaoY233/Chat2API/releases) 下载最新版本。
 
-## 🤝 Contributing
+## 🤝 贡献
 
-1. Fork the project
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork 本项目
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 提交 Pull Request
 
-## 📄 License
+## 📄 许可证
 
-GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
+GNU 通用公共许可证 v3.0。详见 [LICENSE](LICENSE)。
 
-This means:
+这意味着：
 
-- ✅ Free to use, modify, and distribute
-- ✅ Derivative works must be open-sourced under the same license
-- ✅ Must preserve original copyright notices
+- ✅ 可以自由使用、修改和分发
+- ✅ 衍生作品必须以相同许可证开源
+- ✅ 必须保留原始版权声明
 
-## 🙏 Acknowledgments
+## 🙏 致谢
 
-- [Electron](https://www.electronjs.org/) - Cross-platform framework
-- [React](https://react.dev/) - UI framework
-- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
-- [Zustand](https://zustand-demo.pmnd.rs/) - State management
-- [Koa](https://koajs.com/) - HTTP server
+- [Electron](https://www.electronjs.org/) - 跨平台框架
+- [React](https://react.dev/) - UI 框架
+- [TypeScript](https://www.typescriptlang.org/) - 类型安全的 JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
+- [Zustand](https://zustand-demo.pmnd.rs/) - 状态管理
+- [Koa](https://koajs.com/) - HTTP 服务器
