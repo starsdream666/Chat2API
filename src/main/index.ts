@@ -6,6 +6,8 @@ import { registerIpcHandlers } from './ipc/handlers'
 import { UpdaterManager } from './updater'
 import { storeManager } from './store/store'
 
+const isHeadlessMode = process.env.CHAT2API_HEADLESS === '1'
+
 // Prevent uncaught exceptions from crashing the app
 process.on('uncaughtException', (error) => {
   console.error('Uncaught Exception:', error)
@@ -21,6 +23,11 @@ process.on('unhandledRejection', (reason) => {
 if (process.platform === 'darwin' && process.arch === 'arm64') {
   app.commandLine.appendSwitch('js-flags', '--jitless --no-opt')
   app.commandLine.appendSwitch('disable-gpu-sandbox')
+}
+
+if (isHeadlessMode) {
+  app.commandLine.appendSwitch('disable-gpu')
+  app.commandLine.appendSwitch('disable-dev-shm-usage')
 }
 
 // Automatically add --no-sandbox flag when running as root user
@@ -98,6 +105,10 @@ async function setupApp(): Promise<void> {
   await registerIpcHandlers(mainWindow)
 
   trayManager = createTrayManager(mainWindow)
+  if (isHeadlessMode) {
+    trayManager?.destroy()
+    trayManager = null
+  }
 
   await loadAppContent(mainWindow)
 

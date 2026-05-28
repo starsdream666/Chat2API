@@ -1,0 +1,11 @@
+node_modules
+dist
+out
+.git
+.github
+.vscode
+.idea
+*.log
+tmp_apply_patch_test.txt
+zz_patch_probe.txt
+zz_patch_probe2.txt

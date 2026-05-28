@@ -1,0 +1,87 @@
+{
+  "providers": [],
+  "accounts": [],
+  "config": {
+    "proxyPort": 8080,
+    "proxyHost": "0.0.0.0",
+    "loadBalanceStrategy": "round-robin",
+    "modelMappings": {},
+    "defaultModelMappingsSeeded": true,
+    "theme": "system",
+    "autoStart": false,
+    "autoStartProxy": true,
+    "minimizeToTray": false,
+    "logLevel": "info",
+    "logRetentionDays": 7,
+    "requestLogConfig": {
+      "enabled": true,
+      "maxEntries": 200,
+      "includeBodies": false,
+      "maxBodyChars": 8000,
+      "redactSensitiveData": true
+    },
+    "requestTimeout": 60000,
+    "retryCount": 3,
+    "apiKeys": [],
+    "enableApiKey": false,
+    "oauthProxyMode": "system",
+    "sessionConfig": {
+      "sessionTimeout": 30,
+      "maxMessagesPerSession": 50,
+      "deleteAfterTimeout": false,
+      "maxSessionsPerAccount": 3
+    },
+    "toolCallingConfig": {
+      "enabled": true,
+      "mode": "compatibility",
+      "toolChoicePolicy": "auto",
+      "maxInjectedTools": 32,
+      "allowedClients": [],
+      "blockedClients": [],
+      "providers": {},
+      "prompt": {}
+    },
+    "managementApi": {
+      "enableManagementApi": false,
+      "managementApiSecret": ""
+    },
+    "contextManagement": {
+      "enabled": false,
+      "strategies": {
+        "slidingWindow": {
+          "enabled": true,
+          "maxMessages": 20
+        },
+        "tokenLimit": {
+          "enabled": false,
+          "maxTokens": 4000
+        },
+        "summary": {
+          "enabled": false,
+          "keepRecentMessages": 20
+        }
+      },
+      "executionOrder": [
+        "slidingWindow",
+        "tokenLimit",
+        "summary"
+      ]
+    }
+  },
+  "logs": [],
+  "requestLogs": [],
+  "systemPrompts": [],
+  "sessions": [],
+  "statistics": {
+    "totalRequests": 0,
+    "successRequests": 0,
+    "failedRequests": 0,
+    "totalLatency": 0,
+    "lastUpdated": 0,
+    "modelUsage": {},
+    "providerUsage": {},
+    "accountUsage": {},
+    "dailyStats": {}
+  },
+  "userModelOverrides": {}
+}

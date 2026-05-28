@@ -2,6 +2,8 @@ import { BrowserWindow, app, shell } from 'electron'
 import { join } from 'path'
 import { storeManager } from '../store/store'
 
+const isHeadlessMode = process.env.CHAT2API_HEADLESS === '1'
+
 let mainWindow: BrowserWindow | null = null
 
 export interface WindowOptions {
@@ -67,8 +69,10 @@ export function createWindow(options: WindowOptions = {}): BrowserWindow {
   })
 
   mainWindow.once('ready-to-show', () => {
-    mainWindow?.show()
-    mainWindow?.focus()
+    if (!isHeadlessMode) {
+      mainWindow?.show()
+      mainWindow?.focus()
+    }
   })
 
   mainWindow.on('close', (event) => {

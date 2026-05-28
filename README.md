@@ -104,6 +104,21 @@ npm run build:linux        # 构建 Linux 版本 (AppImage, deb)
 npm run build:all          # 构建所有平台
 ```
 
+### Docker 镜像
+
+仓库已包含 `Dockerfile` 和 GitHub Actions 工作流，推送到 `main`/`master` 或发布 tag 后会自动构建并上传到 GitHub Container Registry：
+
+```bash
+docker pull ghcr.io/<owner>/<repo>:main
+docker run -d --name chat2api -p 8080:8080 -v chat2api-data:/root/.chat2api ghcr.io/<owner>/<repo>:main
+```
+
+说明：
+
+- 该镜像以无头模式运行 Electron，并自动启动内置代理服务
+- 代理默认监听容器 `8080` 端口
+- 数据目录挂载在 `/root/.chat2api`
+
 ## 📖 使用方法
 
 ### 步骤 1：启动应用
