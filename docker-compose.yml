@@ -1,0 +1,16 @@
+services:
+  chat2api:
+    image: ghcr.io/${GITHUB_OWNER:-your-github-owner}/${IMAGE_NAME:-chat2api}:main
+    container_name: chat2api
+    restart: unless-stopped
+    ports:
+      - "${CHAT2API_PORT:-8080}:8080"
+    volumes:
+      - chat2api-data:/root/.chat2api
+    environment:
+      CHAT2API_HEADLESS: "1"
+      ELECTRON_DISABLE_SECURITY_WARNINGS: "true"
+      DISPLAY: ":99"
+
+volumes:
+  chat2api-data:

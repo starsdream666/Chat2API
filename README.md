@@ -119,6 +119,31 @@ docker run -d --name chat2api -p 8080:8080 -v chat2api-data:/root/.chat2api ghcr
 - 代理默认监听容器 `8080` 端口
 - 数据目录挂载在 `/root/.chat2api`
 
+### Docker Compose 快速部署
+
+复制环境变量模板并按实际仓库修改：
+
+```bash
+cp .env.example .env
+```
+
+然后启动：
+
+```bash
+docker compose up -d
+```
+
+默认配置文件：
+
+- Compose 文件：`docker-compose.yml`
+- 环境变量模板：`.env.example`
+
+默认镜像地址格式：
+
+```bash
+ghcr.io/<github-owner>/<repo>:main
+```
+
 ## 📖 使用方法
 
 ### 步骤 1：启动应用
